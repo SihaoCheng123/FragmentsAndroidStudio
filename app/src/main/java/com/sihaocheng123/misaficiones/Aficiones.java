@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.sihaocheng123.misaficiones.databinding.ActivityAficionesBinding;
-import com.sihaocheng123.misaficiones.fr.aboutme.SobreMi;
 import com.sihaocheng123.misaficiones.ui.frmanager.Paginador;
 
 public class Aficiones extends AppCompatActivity {

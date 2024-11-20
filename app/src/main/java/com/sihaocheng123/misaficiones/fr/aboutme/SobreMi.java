@@ -35,6 +35,7 @@ public class SobreMi extends Fragment {
             public void onClick(View view) {
                 iconface.setImageResource(R.drawable.smiley);
                 unchecked.setImageResource(R.drawable.check_box_filled);
+                btnChangeFace.setVisibility(View.INVISIBLE);
             }
         });
         return view;

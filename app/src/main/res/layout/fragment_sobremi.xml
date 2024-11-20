@@ -31,6 +31,7 @@
         android:layout_height="120dp"
         app:layout_constraintStart_toStartOf="@id/sobremiGLV1"
         app:layout_constraintTop_toTopOf="@id/sobremiGLH1"
+        android:src="@drawable/yo"
         />
 
     <TextView
@@ -52,7 +53,7 @@
         android:src="@drawable/male"
         app:layout_constraintTop_toBottomOf="@id/miNombre"
         app:layout_constraintStart_toEndOf="@id/foto"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         />
     <TextView
@@ -134,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@id/work"
         app:layout_constraintStart_toStartOf="@id/sobremiGLV1"
         app:layout_constraintEnd_toEndOf="@id/sobremiGLV2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         />
 
     <Button
