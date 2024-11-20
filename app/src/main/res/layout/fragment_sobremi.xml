@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sobremiGLH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="70dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sobremiGLV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sobremiGLV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="@id/sobremiGLV1"
+        app:layout_constraintTop_toTopOf="@id/sobremiGLH1"
+        />
+
+    <TextView
+        android:id="@+id/miNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/foto"
+        app:layout_constraintTop_toTopOf="@id/sobremiGLH1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/nombreMichi"
+        android:textSize="20sp"
+        android:fontFamily="@font/letra"
+        />
+    <ImageView
+        android:id="@+id/genero"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/male"
+        app:layout_constraintTop_toBottomOf="@id/miNombre"
+        app:layout_constraintStart_toEndOf="@id/foto"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4 years old"
+        android:fontFamily="@font/letra"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@id/genero"
+        app:layout_constraintTop_toBottomOf="@id/miNombre"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Purrferction"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/foto"
+        app:layout_constraintStart_toStartOf="@id/sobremiGLV1"
+        app:layout_constraintEnd_toEndOf="@id/sobremiGLV2"
+        android:fontFamily="@font/letra"
+        android:layout_marginTop="30dp"
+        />
+    <ImageView
+        android:id="@id/checked"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/check_box_filled"
+        app:layout_constraintTop_toBottomOf="@id/job"
+        app:layout_constraintStart_toStartOf="@id/sobremiGLV1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        />
+    <TextView
+        android:id="@+id/study"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dormir"
+        android:textSize="25sp"
+        android:fontFamily="@font/letra"
+        app:layout_constraintStart_toEndOf="@id/checked"
+        app:layout_constraintTop_toBottomOf="@id/job"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <ImageView
+        android:id="@id/unchecked"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/check_box"
+        app:layout_constraintTop_toBottomOf="@id/checked"
+        app:layout_constraintStart_toStartOf="@id/sobremiGLV1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        android:id="@+id/work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comer"
+        android:textSize="25sp"
+        android:fontFamily="@font/letra"
+        app:layout_constraintStart_toEndOf="@id/unchecked"
+        app:layout_constraintTop_toBottomOf="@id/study"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/sadface"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/sadface"
+        app:layout_constraintTop_toBottomOf="@id/work"
+        app:layout_constraintStart_toStartOf="@id/sobremiGLV1"
+        app:layout_constraintEnd_toEndOf="@id/sobremiGLV2"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/botonCheer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alimentar"
+        android:textSize="20sp"
+        android:fontFamily="@font/letra"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        app:layout_constraintTop_toBottomOf="@id/sadface"
+        app:layout_constraintStart_toStartOf="@id/sobremiGLV1"
+        app:layout_constraintEnd_toEndOf="@id/sobremiGLV2"
+        android:layout_marginTop="25dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
