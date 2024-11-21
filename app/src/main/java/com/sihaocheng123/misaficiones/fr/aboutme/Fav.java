@@ -1,5 +1,9 @@
 package com.sihaocheng123.misaficiones.fr.aboutme;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -27,9 +31,25 @@ public class Fav extends Fragment {
         btnMostrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view1) {
-                imgFav.setVisibility(View.VISIBLE);
-                hobbyFav.setVisibility(View.VISIBLE);
-                btnMostrar.setVisibility(View.INVISIBLE);
+                SharedPreferences preferences = getActivity().getSharedPreferences("Actividad favorita", MODE_PRIVATE);
+                String texto = preferences.getString("Actividad favorita", null);
+                if (texto != null){
+                    hobbyFav.setText(texto);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.clear().apply();
+                    hobbyFav.setVisibility(View.VISIBLE);
+                    imgFav.setImageResource(R.drawable.feliz);
+                    imgFav.setVisibility(View.VISIBLE);
+                    btnMostrar.setVisibility(View.INVISIBLE);
+                }else{
+                    hobbyFav.setVisibility(View.VISIBLE);
+                    imgFav.setImageResource(R.drawable.awkward);
+                    imgFav.setVisibility(View.VISIBLE);
+                }
+
+
+
+
             }
         });
         return view;

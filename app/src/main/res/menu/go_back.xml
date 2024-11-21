@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/aboutMeButton"
-        android:title="About me"
-        app:showAsAction="never"
+        android:id="@+id/volver"
+        android:title="Go back"
+        android:icon="@drawable/arrow"
+        app:showAsAction="always"
         />
-
     <item
         android:id="@+id/myCodeButton"
         android:title="KittyHub"

@@ -2,8 +2,14 @@ package com.sihaocheng123.misaficiones;
 
 import android.content.Intent;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -28,5 +34,31 @@ public class Tabs extends AppCompatActivity {
 
         TabLayout tabLayout = binding.Tabs;
         tabLayout.setupWithViewPager(viewPager);
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.go_back, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id== R.id.volver){
+            Intent intent = new Intent(Tabs.this, Aficiones.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
+        if (id==R.id.myCodeButton){
+            Toast toast = Toast.makeText(this, "Redirecting to GitHub", Toast.LENGTH_SHORT);
+            toast.show();
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://github.com/SihaoCheng123"));
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

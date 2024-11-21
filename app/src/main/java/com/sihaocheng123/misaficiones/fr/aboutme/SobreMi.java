@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,13 +21,6 @@ public class SobreMi extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sobremi, container, false);
-
-        ImageView imgMia = view.findViewById(R.id.foto);
-        Glide.with(view)
-                .load("https://images.unsplash.com/photo-1588768987479-bcebeefb8a5c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-                .centerCrop()
-                .into(imgMia);
-
         ImageView iconface = view.findViewById(R.id.sadface);
         ImageView unchecked = view.findViewById(androidx.appcompat.R.id.unchecked);
         Button btnChangeFace = view.findViewById(R.id.botonCheer);
@@ -36,6 +30,8 @@ public class SobreMi extends Fragment {
                 iconface.setImageResource(R.drawable.smiley);
                 unchecked.setImageResource(R.drawable.check_box_filled);
                 btnChangeFace.setVisibility(View.INVISIBLE);
+                Toast toast = Toast.makeText(getContext(), "Purr", Toast.LENGTH_SHORT);
+                toast.show();
             }
         });
         return view;
